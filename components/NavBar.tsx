@@ -84,7 +84,7 @@ const NavBar = () => {
             )}
           </div>
         )}
-
+ {/* other menu */}
         <div className="flex gap-5 text-xl [&>*]:cursor-pointer"></div>
       </div>
     </nav>
