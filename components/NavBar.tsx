@@ -16,10 +16,12 @@ import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { TbBracketsAngle } from "react-icons/tb";
 
-const NavBar = () => {
+interface NavBarProps{
+  user: User
+}
+const NavBar: React.FC<NavBarProps> = ({user}) => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openUserMenu, setOpenUserMenu] = useState(false);
-  const [user, setUser] = useState(false);
 
   const openMenuHandler = () => {
     setOpenMobileMenu(!openMobileMenu);
@@ -84,9 +86,43 @@ const NavBar = () => {
             )}
           </div>
         )}
- {/* other menu */}
-        <div className="flex gap-5 text-xl [&>*]:cursor-pointer"></div>
+        {/* <div className="flex gap-5 text-xl [&>*]:cursor-pointer"></div> */}
       </div>
+      {/* other menu */}
+      {openMobileMenu && (
+        <div className="md-hidden">
+          <div className="absolute right-5 width-48 bg-gray-700 py-5 rounded-md shadow-md p-4 text-white text-center z-[99999]F">
+            <ul className="flex flex-col gap-5">
+            {mainLinks.map((link, index) => (
+            <Link key={index} href={link.route}>
+              <li>{link.label}</li>
+            </Link>
+          ))}
+            {!user ? (
+              <>
+                <Link href={"/sign-in"}>
+                  <li>Log In</li>
+                </Link>
+                <Link href={"/sign-up"}>
+                  <li>Sign Up</li>
+                </Link>
+              </>
+            ) : (
+              <>
+                {userLinks.map((link) => (
+                  <Link href={link.route}>
+                    <li>{link.label}</li>
+                  </Link>
+                ))}
+                <li className="cursor-pointer" onClick={() => signOut()}>
+                  Sign Out
+                </li>
+              </>
+            )}
+            </ul>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
