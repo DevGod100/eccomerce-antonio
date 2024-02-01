@@ -1,6 +1,10 @@
+import SignInForm from "../components/SignInForm"
+
 const page = () => {
     return (
-      <div>page</div>
+      <div className="py-10">
+        <SignInForm />
+      </div>
     )
   }
   
