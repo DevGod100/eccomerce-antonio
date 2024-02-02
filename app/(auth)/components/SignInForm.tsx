@@ -14,7 +14,31 @@ const SignInForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  }
+    const formData = new FormData(formRef.current!);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    try {
+      const result = await signIn("credentials", {
+        redirect: false,
+        email,
+        password,
+      }); 
+      
+      // ! FARcry123
+
+      if (result?.error) {
+        throw new Error(result?.error);
+      }
+
+      toast.success("Authentication successful");
+      router.refresh;
+      router.push("/");
+    } catch (error: any) {
+      toast.error(error.message || "Authentication failed");
+    }
+  };
+
   return (
     <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-2xl md:outline outline-1 outline-gray-200">
       <div className="px-4 py-8 sm:rounded-lg sm:px-10">
