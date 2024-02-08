@@ -6,7 +6,7 @@ import Checkout from "./Checkout";
 import Button from "@/components/ui/Button";
 import { IoMdAdd } from "react-icons/io";
 import { FiMinus, FiPlus } from "react-icons/fi";
-// import formatPrice from "@/utils/formatPrice";
+import formatPrice from "@/utils/formatPrice";
 
 const Cart = () => {
   const { cartDetails, removeItem, totalPrice, decrementItem, incrementItem } =
@@ -105,11 +105,11 @@ const Cart = () => {
                 <p>
                   {totalPrice}
                 </p>
-                {/* <p>
+                <p>
                   {totalPrice !== undefined
                     ? formatPrice(totalPrice)
                     : null}
-                </p> */}
+                </p>
               </div>
               <p className="mt-1 text-sm text-gray-500">
                 Shipping and taxes are calcualted at

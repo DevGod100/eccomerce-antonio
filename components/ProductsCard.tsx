@@ -5,7 +5,7 @@ import { FaHeartCirclePlus, FaEye } from "react-icons/fa6";
 import toast from "react-hot-toast";
 import { ProductType } from "@/types/ProductTypes";
 import AddToCart from "@/app/(shoppingcart)/components/ui/AddToCart";
-// import formatPrice from "@/utils/formatPrice";
+import formatPrice from "@/utils/formatPrice";
 // import AddToWishlistButton from "@/app/(wishlist)/components/AddToWishlistButton";
 
 const ProductsCard = ({
@@ -51,7 +51,7 @@ const ProductsCard = ({
      <h3 className="font-bold tracking-wide">
       {product.name}
     </h3>
-    {/* <span>{formatPrice(product.unit_amount)}</span> */}
+    <span>{formatPrice(product.unit_amount)}</span>
     <span>{product.unit_amount}</span>
     <select
       value={selectedSize}
