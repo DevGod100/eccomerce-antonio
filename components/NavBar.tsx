@@ -9,12 +9,12 @@ import { User } from "@prisma/client";
 //icons
 import {
   AiOutlineUser,
-  AiOutlineHeart,
 } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { TbBracketsAngle } from "react-icons/tb";
 import CartIcon from "@/app/(shoppingcart)/components/ui/CartIcon";
+import WishlistIcon from "@/app/(wishlist)/components/WishlistIcon";
 
 interface NavBarProps{
   user: User
@@ -49,8 +49,8 @@ const NavBar: React.FC<NavBarProps> = ({user}) => {
           ))}
         </ul>
         <div className="flex gap-5 text-xl [&>*]:cursor-pointer">
-          <CartIcon />
-          <AiOutlineHeart />
+        <CartIcon />
+          <WishlistIcon />
           <div className="max-md:hidden" onClick={userMenuHandler}>
             <AiOutlineUser />
           </div>

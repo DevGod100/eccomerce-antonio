@@ -52,7 +52,6 @@ const ProductsCard = ({
       {product.name}
     </h3>
     <span>{formatPrice(product.unit_amount)}</span>
-    <span>{product.unit_amount}</span>
     <select
       value={selectedSize}
       onChange={(e) => setSelectedSize(e.target.value)}
