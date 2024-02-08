@@ -6,6 +6,7 @@ import {
   FaSquareSnapchat,
 } from "react-icons/fa6";
 import { TbBracketsAngle } from "react-icons/tb";
+import { TbBrandShopee } from "react-icons/tb";
 import { FaFacebookSquare } from "react-icons/fa";
 import Image from "next/image";
 import { mainLinks } from "@/constants";
@@ -17,8 +18,8 @@ const Footer = () => {
       <div className="main-container">
         <div className="py-5 mb-5 border-b border-gray-300 border-opacity-20 flex justify-between items-center max-md:flex-col max-md:gap-8">
           <div className="flex flex-1 gap-1 items-center text-xl font-medium text-white">
-            <h1>DEV-THREADS</h1>
-            <TbBracketsAngle />
+            <h1>STEVE-SHOP</h1>
+            <TbBrandShopee size={20}/>
           </div>
 
           <ul className="flex items-center justify-center gap-16 flex-1 text-white max-md:flex-col max-md:gap-5">
@@ -38,7 +39,7 @@ const Footer = () => {
         </div>
 
         <div className="w-full text-center text-sm text-white flex flex-col gap-5 md:flex-row justify-center items-center">
-          <span >All Rights Reserved <span className="bold">devthreads.com</span></span>
+          <span >All Rights Reserved <span className="bold">SteveShop.com</span></span>
 
           {/* <Image
             src={"/payment-getways.png"}

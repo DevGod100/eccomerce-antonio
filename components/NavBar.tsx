@@ -12,7 +12,8 @@ import {
 } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { TbBracketsAngle } from "react-icons/tb";
+// import { TbBracketsAngle } from "react-icons/tb";
+import { TbBrandShopee } from "react-icons/tb";
 import CartIcon from "@/app/(shoppingcart)/components/ui/CartIcon";
 import WishlistIcon from "@/app/(wishlist)/components/WishlistIcon";
 
@@ -36,8 +37,8 @@ const NavBar: React.FC<NavBarProps> = ({user}) => {
       <div className="main-container border-b border-1 flex justify-between items-center py-2 relative">
         <Link href={"/"}>
           <div className="flex gap-1 items-center text-xl font-medium text-black">
-            <h1>DEV-THREADS</h1>
-            <TbBracketsAngle />
+            <h1>STEVE-SHOP</h1>
+            <TbBrandShopee size={20}/>
           </div>
         </Link>
 
