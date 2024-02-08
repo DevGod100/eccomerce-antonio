@@ -11,10 +11,10 @@ export const mainLinks = [
       route: "/contact",
       label: "Contact",
     },
-    {
-      route: "/",
-      label: "About",
-    },
+    // {
+    //   route: "/",
+    //   label: "About",
+    // },
   ];
   
   
